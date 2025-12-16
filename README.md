@@ -57,9 +57,11 @@ DRAM chips should be 256Kx4 in size (128KB each) and should use the SOJ-20 (26) 
 
 The Gerber files necessary for manufacturing the PCB were generated based on the parameters provided by JLCPCB as well as PCBWay. The board is a four layer board (layers top to bottom: F.Cu, In1.Cu, In2.Cu, B.Cu). I would recommend ENIG plating as I feel it makes soldering the chips somewhat easier (still a pain though, be warned). In addition, when specifying the board parameters, ensure to select a board width of <b><u>1.2mm</u></b>
 
-## About Larger Modules and Pin #5
+## Using 1Mx4 DRAM Chips and Pin #5 Caveat
 
-TBD
+Pin #5 on each DRAM footprint is connected directly to ground to allow the SIMM module to be populated with larger than 256Kx memory chips if desired e.g. 1Mx4 (M5M44400CJ). On most 256x4 DRAM modules pin 5 is NC (not electrically connected) whereas on 1Mx4 chips pin 5 is assigned to address line A9. By permanently pulling A9 low we ensure data is always returned from the correct location in memory.
+
+Pin #5 on most 256kx4 DRAM modules is not electrically connected (NC), but on certain chips this pin allows a special diagnostic mode to be activated if pulled to ground (TI TMS44C256 specifically). If using DRAM which provides diagnostic function on pin #5, that pin cannot be pulled to ground. Pin can be isolated from ground by cutting the jumper.
 
 ## Image Gallery
 
