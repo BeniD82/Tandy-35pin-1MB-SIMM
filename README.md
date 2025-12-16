@@ -63,9 +63,9 @@ TBD
 
 ## Image Gallery
 
-| ![](https://github.com/BeniD82/Compaq-SLT286-RAM/blob/main/Images/3MB_installed.jpg) | ![](https://github.com/BeniD82/Compaq-SLT286-RAM/blob/main/Images/test_checkit3.jpg) |
+| ![](https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/1500HD.jpg) | ![](https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/1500HD-2.jpg) |
 | :---------------: | :---------------: |
-| ![](https://github.com/BeniD82/Compaq-SLT286-RAM/blob/main/Images/boot_mem.jpg) | ![](https://github.com/BeniD82/Compaq-SLT286-RAM/blob/main/Images/test_winsleuth3.jpg) |
+![](https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/2810HD.jpg)
 
 ## Version History:
 
