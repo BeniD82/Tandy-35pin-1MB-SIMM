@@ -59,9 +59,7 @@ The Gerber files necessary for manufacturing the PCB were generated based on the
 
 ## Using 1Mx4 DRAM Chips and Pin #5 Caveat
 
-Pin #5 on each DRAM footprint is connected directly to ground to allow the SIMM module to be populated with larger than 256Kx memory chips if desired e.g. 1Mx4 (M5M44400CJ). On most 256x4 DRAM modules pin 5 is NC (not electrically connected) whereas on 1Mx4 chips pin 5 is assigned to address line A9. By permanently pulling A9 low we ensure data is always returned from the correct location in memory.
-
-Pin #5 on most 256kx4 DRAM modules is not electrically connected (NC), but on certain chips this pin allows a special diagnostic mode to be activated if pulled to ground (TI TMS44C256 specifically). If using DRAM which provides diagnostic function on pin #5, that pin cannot be pulled to ground. Pin can be isolated from ground by cutting the jumper.
+Pin #5 on each DRAM footprint is connected directly to ground to allow the SIMM module to be populated with larger than 256Kx4 memory chips if desired e.g. M5M44400CJ (1Mx4). On most 256Kx4 DRAM modules pin #5 is NC (not electrically connected) whereas on 1Mx4 chips pin 5 is assigned to address line A9. By permanently pulling A9 low we ensure data is always returned from the correct location in memory. On certain 256Kx4 chips this pin allows for a special diagnostic mode to be activated if pulled to ground (TI TMS44C256 specifically). If using DRAM which provides diagnostic function on pin #5, that pin cannot be pulled to ground but should be left floating. Pin can be isolated from ground by cutting the jumper JP1 on Rev3 PCBs (Rev2 is permanently pulled to ground).
 
 ## Image Gallery
 
