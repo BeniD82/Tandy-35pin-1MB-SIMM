@@ -1,12 +1,13 @@
 # Tandy 35 Pin SIMM Module Module
 
-<img src="https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/Revision3_Front.PNG"> 
+<img src="https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/Revision3_Front.PNG" width="60%"> 
+<img src="https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/Revision3_Back.PNG" width="60%"> 
 
 
 
 ## Introduction
 
-Several vintage laptops designed by Panasonic, rebadged under a number of labels, leverage non-standard 35 pin SIMM modules for system memory expansion (to be used as additional EMS or XMS memory depending on the system). Due to the unusual nature and limited use of 35 pin SIMM modules, it is practically impossible source these today. To fill that gap I've recreated these modules and am providing the design files so folks can create their own SIMMS in order to upgrade their systems.  
+Several vintage laptops designed by Panasonic, rebadged under a number of labels, leverage non-standard 35 pin SIMM modules for system memory expansion (to be used as additional EMS or XMS memory depending on the system). Due to the unusual nature and limited use of 35 pin SIMM modules, it is practically impossible source these today. To fill that gap I've recreated the SIMM and I am providing the design files so folks can create their own modules in order to upgrade their systems.  
 
 I'd like to give a shoutout to James Folwer who still had one of these modules in his possession and who also pointed me to the Panasonic CF-270 technical service manual which greatly assisted with the recreation.
 
@@ -25,7 +26,7 @@ Devices known to use 35 pin SIMM modules (not an exhaustive list, there are prob
 <b>Grid:</b>
 <br>Model 1755
 
-## Supported DRAM modules
+## Supported DRAM Modules
 
 DRAM chips should be 256Kx4 in size (128KB each) and should use the SOJ-20 (26) form factor (these are quite common FPM memory chips). Larger modules such as 1Mx4 are also supported since pin #5 for each DRAM footprint is pulled to ground on the PCB (see section about pin #5). A table of manufacturers and compatible modules that might work, barring they are using the SOJ-20 (26) form factor, can be found below:
 
