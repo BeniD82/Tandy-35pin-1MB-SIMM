@@ -9,7 +9,7 @@
 
 Several vintage laptops designed by Panasonic, rebadged under a number of labels, require non-standard 35 pin SIMM modules for system memory expansion (to be used as additional EMS or XMS memory depending on the system). Due to the unusual nature and limited use of 35 pin SIMM modules overall, it is practically impossible source these today. To fill that gap I've recreated the SIMM and I am providing the design files so folks can create their own modules in order to upgrade their systems.
 
-I'd like to give a shoutout to James Folwer who still had one of these modules in his possession and who also pointed me to the Panasonic CF-270 technical service manual which contained the pinout for the 35 pin SIMM slots. Being able to take measurements was incredibly helpful and not having to determine the pinout saved me a lot of time (and frustration). 
+I'd like to give a shoutout to James Fowler who still had one of these modules in his possession and who also pointed me to the Panasonic CF-270 technical service manual which contained the pinout for the 35 pin SIMM slots. Being able to take measurements was incredibly helpful and not having to determine the pinout saved me a lot of time (and frustration). 
 
 Devices known to use 35 pin SIMM modules (not an exhaustive list, there are probably more):
 
