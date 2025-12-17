@@ -7,9 +7,9 @@
 
 ## Introduction
 
-Several vintage laptops designed by Panasonic, rebadged under a number of labels, leverage non-standard 35 pin SIMM modules for system memory expansion (to be used as additional EMS or XMS memory depending on the system). Due to the unusual nature and limited use of 35 pin SIMM modules, it is practically impossible source these today. To fill that gap I've recreated the SIMM and I am providing the design files so folks can create their own modules in order to upgrade their systems.  
+Several vintage laptops designed by Panasonic, rebadged under a number of labels, require non-standard 35 pin SIMM modules for system memory expansion (to be used as additional EMS or XMS memory depending on the system). Due to the unusual nature and limited use of 35 pin SIMM modules overall, it is practically impossible source these today. To fill that gap I've recreated the SIMM and I am providing the design files so folks can create their own modules in order to upgrade their systems.
 
-I'd like to give a shoutout to James Folwer who still had one of these modules in his possession and who also pointed me to the Panasonic CF-270 technical service manual which greatly assisted with the recreation.
+I'd like to give a shoutout to James Folwer who still had one of these modules in his possession and who also pointed me to the Panasonic CF-270 technical service manual which contained the pinout for the 35 pin SIMM slots. Being able to take measurements was incredibly helpful and not having to determine the pinout saved me a lot of time (and frustration). 
 
 Devices known to use 35 pin SIMM modules (not an exhaustive list, there are probably more):
 
@@ -26,10 +26,16 @@ Devices known to use 35 pin SIMM modules (not an exhaustive list, there are prob
 <b>Grid:</b>
 <br>Model 1755
 
+<br>
+
 ## Supported DRAM Modules
 
-DRAM chips should be 256Kx4 in size (128KB each) and should use the SOJ-20 (26) form factor (these are quite common FPM memory chips). Larger modules such as 1Mx4 are also supported since pin #5 for each DRAM footprint is pulled to ground on the PCB (see section about pin #5). A table of manufacturers and compatible modules that might work, barring they are using the SOJ-20 (26) form factor, can be found below:
+DRAM chips to be used should be 256Kx4 per chip (128KB each) and should use the SOJ-20(26) form factor (these are quite common FPM memory chips and should still be readily available at somewhat reasonable prices, depending on the module used/availability). 
 
+Larger chips such as 1Mx4 are also supported since pin #5 for each DRAM footprint is pulled to ground on the PCB (see section about regarding pin #5 as well as caveats related to pin #5). FYI, I used 1Mx4 chips since they were actually cheaper for me to purchase than 256Kx4 and they work perfectly fine. 
+
+A table of manufacturers and compatible modules that might work, as long as they are using the SOJ-20 (26) form factor, can be found below:
+<br>
 
 | Manufacturer      | 256Kx4 (1M) | 1Mx4 (4M) |
 | ----------------- | ----------- | --------- |
@@ -46,6 +52,7 @@ DRAM chips should be 256Kx4 in size (128KB each) and should use the SOJ-20 (26) 
 | TI<br>TMS         | 44C256      | 44400     |
 | Toshiba<br>TC     | 514256      | TC514400  |
 
+<br>
 
 ## Bill of Materials
 
@@ -54,19 +61,40 @@ DRAM chips should be 256Kx4 in size (128KB each) and should use the SOJ-20 (26) 
 | U1, U2, U3, U4, U5, U6, U7, U8 | 256Kx4 or 1Mx4 DRAM Module | SOJ-20 (26) | See Above |
 | C1, C2, C3, C4, C5, C6, C7, C8 | 0.047uF MLCC Capacitor 25V 5% Tolerance| 0805 | Kyrocera/AVX 08055C473JAT4A |
 
+<br>
+
 ## PCB Manufacturing and Assembly
 
 The Gerber files necessary for manufacturing the PCB were generated based on the parameters provided by JLCPCB as well as PCBWay. The board is a four layer board (layers top to bottom: F.Cu, In1.Cu, In2.Cu, B.Cu). I would recommend ENIG plating as I feel it makes soldering the chips somewhat easier (still a pain though, be warned). In addition, when specifying the board parameters, ensure to select a board width of <b><u>1.2mm</u></b>
 
+<br>
+
 ## Using 1Mx4 DRAM Chips and Pin #5 Caveat
 
 Pin #5 on each DRAM footprint is connected directly to ground to allow the SIMM module to be populated with larger than 256Kx4 memory chips if desired e.g. M5M44400CJ (1Mx4). On most 256Kx4 DRAM modules pin #5 is NC (not electrically connected) whereas on 1Mx4 chips pin 5 is assigned to address line A9. By permanently pulling A9 low we ensure data is always returned from the correct location in memory. On certain 256Kx4 chips this pin allows for a special diagnostic mode to be activated if pulled to ground (TI TMS44C256 specifically). If using DRAM which provides diagnostic function on pin #5, that pin cannot be pulled to ground but should be left floating. Pin can be isolated from ground by cutting the jumper JP1 on Rev3 PCBs (Rev2 is permanently pulled to ground).
+
+<br>
+
+## EMS Driver for the Tandy 1500HD
+
+
+In order for the Tandy 1500HD to be able to use the 1MB memory module as additional EMS memory, it is necessary to install an EMS driver specific to the Tandy 1500HD. Since this driver is impossible to locate online, a copy has been provided on this page as well for your convenience. 
+
+To install the driver, simply extract it onto your floppy or hard drive and add the below line to your CONFIG.SYS file (path to the EMS driver file will depend on where it's been extracted to). 
+
+Example:
+
+    DEVICE=C:\TEMM1500.SYS
+
+<br>
 
 ## Image Gallery
 
 | ![](https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/1500HD.jpg) | ![](https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/1500HD-2.jpg) |
 | :---------------: | :---------------: |
 ![](https://github.com/BeniD82/Tandy-35pin-1MB-SIMM/blob/main/Images/2810HD.jpg)
+
+<br>
 
 ## Version History:
 
