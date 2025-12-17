@@ -34,7 +34,7 @@ DRAM chips to be used should be 256Kx4 per chip (128KB each) and should use the 
 
 Larger chips such as 1Mx4 are also supported since pin #5 for each DRAM footprint is pulled to ground on the PCB (see section about regarding pin #5 as well as caveats related to pin #5). FYI, I used 1Mx4 chips since they were actually cheaper for me to purchase than 256Kx4 and they work perfectly fine. 
 
-A table of manufacturers and compatible modules that might work, as long as they are using the SOJ-20 (26) form factor, can be found below:
+A table of manufacturers and compatible modules that might work, as long as they are using the SOJ-20(26) form factor, can be found below:
 <br>
 
 | Manufacturer      | 256Kx4 (1M) | 1Mx4 (4M) |
@@ -65,7 +65,7 @@ A table of manufacturers and compatible modules that might work, as long as they
 
 ## PCB Manufacturing and Assembly
 
-The Gerber files necessary for manufacturing the PCB were generated based on the parameters provided by JLCPCB as well as PCBWay. The board is a four layer board (layers top to bottom: F.Cu, In1.Cu, In2.Cu, B.Cu). I would recommend ENIG plating as I feel it makes soldering the chips somewhat easier (still a pain though, be warned). In addition, when specifying the board parameters, ensure to select a board width of <b><u>1.2mm</u></b>
+The Gerber files necessary for manufacturing the PCB were generated based on the parameters provided by JLCPCB as well as PCBWay. The board is a four layer board (layers top to bottom: F.Cu, In1.Cu, In2.Cu, B.Cu). I would recommend ENIG plating as I feel it makes soldering the chips somewhat easier (still a pain though, be warned). In addition, when specifying the board parameters, ***ensure to select a PCB thickness of 1.2mm (1.6mm will be too thick).***
 
 <br>
 
