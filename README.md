@@ -73,6 +73,6 @@ Pin #5 on each DRAM footprint is connected directly to ground to allow the SIMM 
 *   Revision 3 (current)    
     + Added Jumper JP1 to allow pin #5 to be disconnected from GND if needed (to support DRAM that uses pin #5 for diagnostic mode)
 *   Revision 2   
-    + Tweaked IC leg pitch on footprints that were not properly alignedt 
+    + Tweaked IC leg pitch on footprints that were not properly aligned
 *   Revision 1
     + Initial release (files not provided)
