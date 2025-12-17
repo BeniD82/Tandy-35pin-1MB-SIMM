@@ -58,7 +58,7 @@ A table of manufacturers and compatible modules that might work, as long as they
 
 | Location | Part | Case Code | Part number |
 | --- | --- | --- | --- |
-| U1, U2, U3, U4, U5, U6, U7, U8 | 256Kx4 or 1Mx4 DRAM Module | SOJ-20 (26) | See Above |
+| U1, U2, U3, U4, U5, U6, U7, U8 | 256Kx4 or 1Mx4 DRAM Module | SOJ-20(26) | See Above |
 | C1, C2, C3, C4, C5, C6, C7, C8 | 0.047uF MLCC Capacitor 25V 5% Tolerance| 0805 | Kyrocera/AVX 08055C473JAT4A |
 
 <br>
